@@ -3,17 +3,21 @@ from utils.evaluator import evaluate_answers
 
 app = Flask(__name__)
 
-# Home Route
 @app.route('/')
 def home():
     return "Server is Running successful"
 
+@app.route('/statistics')
+def statistics():
+    return render_template('statistics.html')
 
-# Submit Test Route
+@app.route('/notifications')
+def notifications():
+    return render_template('notifications.html')
+
 @app.route('/submit_test', methods=['POST'])
 def submit_test():
     user_answers = request.form.to_dict()
-
     result = evaluate_answers(user_answers)
 
     return render_template(
@@ -22,8 +26,3 @@ def submit_test():
         total=result["total"],
         percentage=result["percentage"]
     )
-
-
-# Run Server
-if __name__ == '__main__':
-    app.run(debug=True)

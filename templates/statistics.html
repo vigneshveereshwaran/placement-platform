@@ -1,1 +1,80 @@
-<h1>Placement statistics </h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Statistics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="page-title">Placement Statistics</h1>
+
+    <div class="stats-grid">
+      <div class="card">
+        <h2>250</h2>
+        <p>Total Students</p>
+      </div>
+
+      <div class="card">
+        <h2>180</h2>
+        <p>Placed Students</p>
+      </div>
+
+      <div class="card">
+        <h2>12 LPA</h2>
+        <p>Highest Package</p>
+      </div>
+
+      <div class="card">
+        <h2>TCS</h2>
+        <p>Top Recruiter</p>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <h2>Department-wise Placement</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Total Students</th>
+            <th>Placed</th>
+            <th>Placement %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CSE</td>
+            <td>80</td>
+            <td>65</td>
+            <td>81%</td>
+          </tr>
+          <tr>
+            <td>IT</td>
+            <td>70</td>
+            <td>55</td>
+            <td>78%</td>
+          </tr>
+          <tr>
+            <td>ECE</td>
+            <td>60</td>
+            <td>38</td>
+            <td>63%</td>
+          </tr>
+          <tr>
+            <td>EEE</td>
+            <td>40</td>
+            <td>22</td>
+            <td>55%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
