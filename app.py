@@ -15,6 +15,10 @@ def statistics():
 def notifications():
     return render_template('notifications.html')
 
+@app.route('/leaderboard')
+def leaderboard():
+    return render_template('leaderboard.html')
+
 @app.route('/submit_test', methods=['POST'])
 def submit_test():
     user_answers = request.form.to_dict()
@@ -26,3 +30,5 @@ def submit_test():
         total=result["total"],
         percentage=result["percentage"]
     )
+if __name__ == '__main__':
+    app.run(debug=True)
