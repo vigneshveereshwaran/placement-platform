@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            backdrop-filter: blur(15px);
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .add-btn {
+            background: #00c6ff;
+            color: white;
+        }
+
+        .add-btn:hover {
+            background: #0072ff;
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: rgba(255,255,255,0.2);
+        }
+
+        tr {
+            background: rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        tr:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* DELETE BUTTON */
+        .delete-btn {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            color: white;
+        }
+
+        .delete-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 65, 108, 0.8);
+        }
+
+        /* SUCCESS MESSAGE */
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            color: #00ffcc;
+        }
+
+    </style>
+
+    <script>
+        function confirmDelete(userId) {
+            if (confirm("Are you sure you want to delete this user?")) {
+                window.location.href = "/delete_user/" + userId;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Admin Dashboard</h2>
+
+    <!-- ADD USER -->
+    <form action="/add_user" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button class="add-btn" type="submit">Add User</button>
+    </form>
+
+    <p class="message">{{ message }}</p>
+
+    <!-- USER TABLE -->
+    <h3 style="margin-top:20px;">User List</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[3] }}</td>
+            <td>
+                <button class="delete-btn" onclick="confirmDelete({{ user[0] }})">
+                    🗑️ Delete
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+</body>
+</html>

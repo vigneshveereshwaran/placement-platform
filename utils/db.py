@@ -1,34 +1,48 @@
 import sqlite3
 
-# Connect to database (creates file if not exists)
-conn = sqlite3.connect("students.db")
+def connect_db():
+    return sqlite3.connect("database/database.db")
 
-# Create a cursor
-cursor = conn.cursor()
+def get_all_users():
+    conn = connect_db()
+    cursor = conn.cursor()
 
-# Create table
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS students (
-    id INTEGER PRIMARY KEY,
-    name TEXT,
-    age INTEGER
-)
-""")
+    cursor.execute("SELECT * FROM users")
+    users = cursor.fetchall()
 
-# Insert data
-cursor.execute("INSERT INTO students (name, age) VALUES (?, ?)", ("Ravi", 20))
-cursor.execute("INSERT INTO students (name, age) VALUES (?, ?)", ("Anu", 19))
+    conn.close()
+    return users
 
-# Save changes
-conn.commit()
+def check_user(username, password):
+    conn = connect_db()
+    cursor = conn.cursor()
 
-# Fetch data
-cursor.execute("SELECT * FROM students")
-rows = cursor.fetchall()
+    cursor.execute(
+        "SELECT * FROM users WHERE username=? AND password=?",
+        (username, password)
+    )
 
-# Print data
-for row in rows:
-    print(row)
+    user = cursor.fetchone()
+    conn.close()
+    return user
 
-# Close connection
-conn.close()
+def delete_user(user_id):
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM users WHERE id=?", (user_id,))
+
+    conn.commit()
+    conn.close()
+    
+def add_user(username, password):
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "INSERT INTO users (username, password, role) VALUES (?, ?, ?)",
+        (username, password, "user")
+    )
+
+    conn.commit()
+    conn.close()
