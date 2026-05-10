@@ -1,9 +1,9 @@
 def evaluate_answers(user_answers):
     # Correct answers (example)
     correct_answers = {
-        "q1": "A",
+        "q1": "B",
         "q2": "B",
-        "q3": "C"
+        
     }
 
     score = 0
