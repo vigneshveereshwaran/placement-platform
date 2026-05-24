@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            display:flex;
+            background:#081b29;
+            color:white;
+        }
+
+        .sidebar{
+            width:220px;
+            height:100vh;
+            background:#06141f;
+            padding:20px;
+        }
+
+        .sidebar h2{
+            margin-bottom:40px;
+            color:#00d9b8;
+        }
+
+        .sidebar ul{
+            list-style:none;
+        }
+
+        .sidebar ul li{
+            margin:20px 0;
+        }
+
+        .sidebar ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:16px;
+        }
+
+        .main{
+            flex:1;
+            padding:20px;
+        }
+
+        .topbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:30px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+            margin-bottom:30px;
+        }
+
+        .card{
+            background:#10293d;
+            padding:25px;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        .card h1{
+            color:#00d9b8;
+            margin-top:10px;
+        }
+
+        .activity{
+            background:#10293d;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        .activity ul{
+            margin-top:15px;
+            padding-left:20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <ul>
+            <li><a href="admin_dashboard.html">Dashboard</a></li>
+            <li><a href="manage_students.html">Manage Students</a></li>
+            <li><a href="add_student.html">Add Student</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Admin Dashboard</h1>
+            <p>Welcome Admin</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <h1>248</h1>
+            </div>
+
+            <div class="card">
+                <h3>Departments</h3>
+                <h1>12</h1>
+            </div>
+
+            <div class="card">
+                <h3>Active Users</h3>
+                <h1>156</h1>
+            </div>
+
+        </div>
+
+        <div class="activity">
+
+            <h2>Recent Activity</h2>
+
+            <ul>
+                <li>New student registered</li>
+                <li>Admin updated profile</li>
+                <li>Student deleted</li>
+                <li>Department added</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
