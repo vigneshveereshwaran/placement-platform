@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verify OTP</title>
+
+    <!-- AUTH CSS -->
+    <link rel="stylesheet" href="../../static/css/auth.css">
+</head>
+
+<body>
+
+    <!-- AUTH CONTAINER -->
+    <div class="auth-container">
+
+        <!-- OTP CARD -->
+        <div class="auth-card">
+
+            <!-- LOGO -->
+            <div class="auth-logo">
+
+                <h1>PP</h1>
+
+            </div>
+
+            <!-- TITLE -->
+            <h2 class="auth-title">
+                Verify OTP
+            </h2>
+
+            <p class="auth-subtitle">
+                Enter the verification code sent to your email
+            </p>
+
+            <!-- OTP FORM -->
+            <form action="#" method="POST">
+
+                <!-- OTP BOXES -->
+                <div class="otp-container">
+
+                    <input
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]"
+                    maxlength="1"
+                    class="otp-input"
+                    required
+                    >
+
+                    <input
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]"
+                        maxlength="1"
+                        class="otp-input"
+                        required
+                   >
+
+
+                    <input
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]"
+                        maxlength="1"
+                        class="otp-input"
+                        required
+                    >
+                    <input
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]"
+                        maxlength="1"
+                        class="otp-input"
+                        required
+                    >
+
+                </div>
+
+                <!-- VERIFY BUTTON -->
+                <button type="submit" class="btn-primary">
+
+                    Verify OTP
+
+                </button>
+
+            </form>
+
+            <!-- RESEND OTP -->
+            <div class="auth-links">
+
+                <p>
+                    Didn't receive the code?
+
+                    <a href="#">
+                        Resend OTP
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
