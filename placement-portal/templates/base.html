@@ -7,21 +7,43 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-    {% include 'navbar.html' %}
+    <div class="layout">
 
-    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
 
-        {% include 'sidebar.html' %}
+            <h2 class="logo">Placement Portal</h2>
 
-        <div class="content">
-            {% block content %}
-            {% endblock %}
+            <a href="/add-student">Add Student</a>
+
+            <a href="/add-company">Add Company</a>
+
+            <a href="/manage-companies">Manage Companies</a>
+
+            <a href="/notifications">Notifications</a>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <div class="topbar">
+                <h1>Admin Panel</h1>
+            </div>
+
+            <div class="content-area">
+                {% block content %}
+                {% endblock %}
+            </div>
+
         </div>
 
     </div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 </body>
 </html>

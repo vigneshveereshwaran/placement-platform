@@ -1,18 +1,27 @@
 
 
+{% extends 'base.html' %}
+
+{% block title %}Notifications{% endblock %}
+
+{% block content %}
+
 <div class="card">
 
-    <h1>Notifications</h1>
+    <h2>Notifications</h2>
 
     <div class="notification">
-        <h3>TCS Drive</h3>
-        <p>Registration closes tomorrow.</p>
+        Resume submission deadline today 6 PM
     </div>
 
     <div class="notification">
-        <h3>Infosys Assessment</h3>
-        <p>Online test starts Monday.</p>
+        TCS drive starts tomorrow
+    </div>
+
+    <div class="notification">
+        Infosys aptitude test on Monday
     </div>
 
 </div>
 
+{% endblock %}
