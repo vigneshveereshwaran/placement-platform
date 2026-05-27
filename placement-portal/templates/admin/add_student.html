@@ -1,62 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student</title>
+{% extends 'base.html' %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% block title %}
+Add Student
+{% endblock %}
 
-</head>
-<body>
+{% block content %}
 
-    <!-- Sidebar -->
+<div class="container">
 
-    <div class="sidebar">
+    <h1>Add Student</h1>
 
-        <h2>Admin Panel</h2>
+    <form class="form-container">
 
-        <ul>
-            <li><a href="/">Dashboard</a></li>
-            <li><a href="/manage-students">Manage Students</a></li>
-            <li><a href="/add-student">Add Student</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
+        <label>Student Name</label>
+        <input type="text" placeholder="Enter student name">
 
-    </div>
+        <label>Roll Number</label>
+        <input type="text" placeholder="Enter roll number">
 
-    <!-- Main Content -->
+        <label>Department</label>
+        <input type="text" placeholder="Enter department">
 
-    <div class="main-content">
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
 
-        <div class="container">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter phone number">
 
-            <h1>Add Student</h1>
+        <button type="submit">
+            Add Student
+        </button>
 
-            <form>
+    </form>
 
-                <label>Student Name</label>
-                <input type="text" placeholder="Enter student name">
+</div>
 
-                <label>Roll Number</label>
-                <input type="text" placeholder="Enter roll number">
-
-                <label>Department</label>
-                <input type="text" placeholder="Enter department">
-
-                <label>Email</label>
-                <input type="email" placeholder="Enter email">
-
-                <label>Phone Number</label>
-                <input type="tel" placeholder="Enter phone number">
-
-                <button type="submit">Add Student</button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</body>
-</html>
+{% endblock %}
