@@ -1,1 +1,25 @@
-<h1>hi</h1>
+{% extends 'base.html' %}
+
+{% block title %}Notifications{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Notifications</h2>
+
+    <div class="notification">
+        Resume submission deadline today 6 PM
+    </div>
+
+    <div class="notification">
+        TCS drive starts tomorrow
+    </div>
+
+    <div class="notification">
+        Infosys aptitude test on Monday
+    </div>
+
+</div>
+
+{% endblock %}

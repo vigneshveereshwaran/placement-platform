@@ -1,0 +1,23 @@
+ <div class="top-navbar">
+
+    <div class="nav-left">
+        <h2>Company Portal</h2>
+    </div>
+
+    <div class="nav-right">
+
+        {% if show_dashboard %}
+        <a href="/company-dashboard">Dashboard</a>
+        {% endif %}
+
+        {% if show_post_job %}
+        <a href="/post-job">Post Job</a>
+        {% endif %}
+
+        {% if show_applications %}
+        <a href="/applications">Applications</a>
+        {% endif %}
+
+    </div>
+
+</div>

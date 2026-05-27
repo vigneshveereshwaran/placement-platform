@@ -1,0 +1,35 @@
+ <div class="top-navbar">
+
+    <div class="nav-left">
+        <h2>Admin Panel</h2>
+    </div>
+
+    <div class="nav-right">
+
+        {% if show_dashboard %}
+        <a href="/admin-dashboard">Dashboard</a>
+        {% endif %}
+
+        {% if show_students %}
+        <a href="/manage-students">Students</a>
+        {% endif %}
+
+        {% if show_add_student %}
+        <a href="/add-student">Add Student</a>
+        {% endif %}
+
+        {% if show_companies %}
+        <a href="/manage-companies">Companies</a>
+        {% endif %}
+
+        {% if show_add_company %}
+        <a href="/add-company">Add Company</a>
+        {% endif %}
+
+        {% if show_notifications %}
+        <a href="/notifications">Notifications</a>
+        {% endif %}
+
+    </div>
+
+</div>

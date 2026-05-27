@@ -1,0 +1,127 @@
+<div class="sidebar">
+
+    <!-- Logo -->
+
+    <h2 class="logo">
+        Placement Portal
+    </h2>
+
+    <!-- =========================
+         ADMIN SIDEBAR
+    ========================== -->
+
+    {% if admin_navbar %}
+
+    <a href="/admin-dashboard">
+        <i class="fa-solid fa-house"></i>
+        Dashboard
+    </a>
+
+    <a href="/manage-students">
+        <i class="fa-solid fa-users"></i>
+        Manage Students
+    </a>
+
+    <a href="/add-student">
+        <i class="fa-solid fa-user-plus"></i>
+        Add Student
+    </a>
+
+    <a href="/manage-companies">
+        <i class="fa-solid fa-briefcase"></i>
+        Manage Companies
+    </a>
+
+    <a href="/add-company">
+        <i class="fa-solid fa-building"></i>
+        Add Company
+    </a>
+
+    <a href="/notifications">
+        <i class="fa-solid fa-bell"></i>
+        Notifications
+    </a>
+
+    <a href="/reports">
+        <i class="fa-solid fa-chart-column"></i>
+        Reports
+    </a>
+
+    {% endif %}
+
+    <!-- =========================
+         STUDENT SIDEBAR
+    ========================== -->
+
+    {% if student_navbar %}
+
+    <a href="/student-dashboard">
+        <i class="fa-solid fa-house"></i>
+        Dashboard
+    </a>
+
+    <a href="/companies">
+        <i class="fa-solid fa-building"></i>
+        Companies
+    </a>
+
+    <a href="/applications">
+        <i class="fa-solid fa-file"></i>
+        Applications
+    </a>
+
+    <a href="/profile">
+        <i class="fa-solid fa-user"></i>
+        Profile
+    </a>
+
+    <a href="/notifications">
+        <i class="fa-solid fa-bell"></i>
+        Notifications
+    </a>
+
+    {% endif %}
+
+    <!-- =========================
+         COMPANY SIDEBAR
+    ========================== -->
+
+    {% if company_navbar %}
+
+    <a href="/company-dashboard">
+        <i class="fa-solid fa-house"></i>
+        Dashboard
+    </a>
+
+    <a href="/post-job">
+        <i class="fa-solid fa-plus"></i>
+        Post Job
+    </a>
+
+    <a href="/applications">
+        <i class="fa-solid fa-file"></i>
+        Applications
+    </a>
+
+    <a href="/selected-students">
+        <i class="fa-solid fa-users"></i>
+        Selected Students
+    </a>
+
+    <a href="/notifications">
+        <i class="fa-solid fa-bell"></i>
+        Notifications
+    </a>
+
+    {% endif %}
+
+    <!-- =========================
+         COMMON LOGOUT
+    ========================== -->
+
+    <a href="/logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </a>
+
+</div>
