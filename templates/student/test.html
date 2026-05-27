@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Test</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>PP</h2>
+        </div>
+
+        <ul>
+
+            <li><a href="/">Dashboard</a></li>
+
+            <li><a href="/profile">Profile</a></li>
+
+            <li><a href="/applications">Applications</a></li>
+
+            <li><a href="/test">Tests</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <h1 class="page-title">Online Aptitude Test</h1>
+
+        <div class="box">
+
+            <form action="/submit_test" method="POST">
+
+                <!-- QUESTION 1 -->
+
+                <div class="question">
+
+                    <h3>1. What is the capital of India?</h3>
+
+                    <div class="option">
+                        <input type="radio" name="q1" value="A">
+                        Chennai
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="q1" value="B">
+                        Delhi
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="q1" value="C">
+                        Mumbai
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION 2 -->
+
+                <div class="question">
+
+                    <h3>2. Python is a ?</h3>
+
+                    <div class="option">
+                        <input type="radio" name="q2" value="A">
+                        Programming Language
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="q2" value="B">
+                        Operating System
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="q2" value="C">
+                        Database
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button type="submit" class="btn">
+                    Submit Test
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

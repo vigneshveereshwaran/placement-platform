@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#071a2f;
+    color:white;
+}
+
+.dashboard-container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:80px;
+    background:#06172b;
+    padding:20px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.logo{
+    background:#00c2a8;
+    color:white;
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:25px 0;
+}
+
+.sidebar ul li a{
+    color:white;
+    font-size:18px;
+    text-decoration:none;
+}
+
+.sidebar ul li.active{
+    background:#00c2a8;
+    padding:10px;
+    border-radius:10px;
+}
+
+/* Main Content */
+
+.main-content{
+    flex:1;
+    padding:30px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.profile-icon{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#00c2a8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+/* Profile Card */
+
+.profile-card{
+    background:white;
+    color:black;
+    border-radius:15px;
+    padding:30px;
+}
+
+/* Student Header */
+
+.student-header{
+    display:flex;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.student-avatar{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#00c2a8;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-weight:bold;
+    margin-right:20px;
+}
+
+.student-info h2{
+    margin-bottom:5px;
+}
+
+.student-info p{
+    color:gray;
+}
+
+.student-info span{
+    color:#00c2a8;
+    font-weight:bold;
+}
+
+/* Sections */
+
+.details-section{
+    margin-bottom:25px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+}
+
+.details-section h3{
+    margin-bottom:20px;
+}
+
+/* Grid */
+
+.details-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-box label{
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.input-box input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.full-width{
+    margin-top:20px;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.skills span{
+    background:#e6f7f4;
+    color:#008b7a;
+    padding:8px 12px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+/* Resume */
+
+.resume-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.resume-box button{
+    padding:8px 15px;
+    border:none;
+    background:#00c2a8;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Save Button */
+
+.save-btn{
+    margin-top:10px;
+    padding:12px 20px;
+    background:#00c2a8;
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+}

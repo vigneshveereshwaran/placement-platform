@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>PP</h2>
+        </div>
+
+        <ul>
+
+            <li><a href="/">Dashboard</a></li>
+
+            <li><a href="/profile">Profile</a></li>
+
+            <li><a href="/applications">Applications</a></li>
+
+            <li><a href="/test">Tests</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <h1 class="page-title">
+            Student Dashboard
+        </h1>
+
+        <div class="box">
+
+            <h2>Welcome Akshaya 👋</h2>
+
+            <p>
+                This portal helps students attend aptitude tests,
+                MCQs and placement assessments.
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <h2>Upcoming Test</h2>
+
+            <table>
+
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Date</th>
+                </tr>
+
+                <tr>
+                    <td>TCS</td>
+                    <td>Software Engineer</td>
+                    <td>12 May 2026</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

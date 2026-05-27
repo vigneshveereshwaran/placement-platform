@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>PP</h2>
+        </div>
+
+        <ul>
+
+            <li><a href="/">Dashboard</a></li>
+
+            <li><a href="/profile">Profile</a></li>
+
+            <li><a href="/applications">Applications</a></li>
+
+            <li><a href="/test">Tests</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <h1 class="page-title">
+            Edit Profile
+        </h1>
+
+        <div class="box">
+
+            <form>
+
+                <input type="text"
+                placeholder="Enter Name">
+
+                <input type="email"
+                placeholder="Enter Email">
+
+                <input type="text"
+                placeholder="Enter Department">
+
+                <input type="text"
+                placeholder="Enter CGPA">
+
+                <textarea
+                placeholder="Enter Skills">
+                </textarea>
+
+                <button class="btn">
+                    Save Profile
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

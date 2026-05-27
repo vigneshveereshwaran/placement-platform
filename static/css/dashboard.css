@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#081421;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:220px;
+    background:#07111D;
+    padding:20px;
+}
+
+.logo{
+    margin-bottom:40px;
+}
+
+.logo h2{
+    color:#14B8A6;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin-bottom:10px;
+}
+
+.sidebar ul li a{
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:#d1d5db;
+    border-radius:6px;
+    font-size:15px;
+}
+
+.sidebar ul li a:hover{
+    background:#14B8A6;
+    color:white;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+    flex:1;
+    padding:25px;
+}
+
+.page-title{
+    color:white;
+    margin-bottom:20px;
+}
+
+/* CONTENT BOX */
+
+.box{
+    background:white;
+    border-radius:8px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.box h2{
+    margin-bottom:10px;
+    color:#081421;
+}
+
+.box p{
+    color:#4b5563;
+}
+
+/* TABLE */
+
+.table-title{
+    margin-bottom:15px;
+    color:#081421;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#14B8A6;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #e5e7eb;
+    color:#374151;
+}
+
+/* FORM */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:6px;
+    outline:none;
+}
+
+textarea{
+    height:120px;
+}
+
+/* BUTTON */
+
+.btn{
+    background:#14B8A6;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* TEST PAGE */
+
+.question{
+    margin-bottom:25px;
+}
+
+.option{
+    margin:10px 0;
+    color:#374151;
+}
+
+.question h3{
+    color:#081421;
+    margin-bottom:10px;
+}
+
+/* STATUS COLORS */
+
+.applied{
+    color:#2563eb;
+    font-weight:600;
+}
+
+.shortlisted{
+    color:#16a34a;
+    font-weight:600;
+}
+
+.pending{
+    color:#f59e0b;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+}
