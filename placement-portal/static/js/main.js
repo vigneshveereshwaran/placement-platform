@@ -1,0 +1,1 @@
+console.log("Placement Portal Loaded");

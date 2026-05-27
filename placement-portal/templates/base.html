@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Placement Portal{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <h2 class="logo">Placement Portal</h2>
+
+            <a href="/add-student">Add Student</a>
+
+            <a href="/add-company">Add Company</a>
+
+            <a href="/manage-companies">Manage Companies</a>
+
+            <a href="/notifications">Notifications</a>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <div class="topbar">
+                <h1>Admin Panel</h1>
+            </div>
+
+            <div class="content-area">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
