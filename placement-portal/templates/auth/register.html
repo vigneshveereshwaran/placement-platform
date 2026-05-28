@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+
+    <!-- AUTH CSS -->
+    <link rel="stylesheet" href="../../static/css/auth.css">
+    
+
+</head>
+
+<body>
+
+    <!-- AUTH CONTAINER -->
+    <div class="auth-container">
+
+        <!-- REGISTER CARD -->
+        <div class="auth-card">
+
+            <!-- LOGO -->
+            <div class="auth-logo">
+
+                <h1>PP</h1>
+
+            </div>
+
+            <!-- TITLE -->
+            <h2 class="auth-title">
+                Create Account
+            </h2>
+
+            <p class="auth-subtitle">
+                Register to continue
+            </p>
+
+            <!-- REGISTER FORM -->
+            <form action="#" method="POST">
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-input"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-input"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-input"
+                        placeholder="Create password"
+                        required
+                    >
+
+                    <!-- PASSWORD STRENGTH -->
+                    <p class="password-strength">
+                        Use at least 8 characters
+                    </p>
+
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-input"
+                        placeholder="Confirm password"
+                        required
+                    >
+
+                </div>
+
+                <!-- TERMS CHECKBOX -->
+                <div class="checkbox-group">
+
+                    <input type="checkbox" id="terms" required>
+
+                    <label for="terms">
+                        I agree to the Terms & Conditions
+                    </label>
+
+                </div>
+
+                <!-- REGISTER BUTTON -->
+                <button type="submit" class="btn-primary">
+
+                    Register
+
+                </button>
+
+            </form>
+
+            <!-- LOGIN LINK -->
+            <div class="auth-links">
+
+                <p>
+                    Already have an account?
+
+                    <a href="/login">
+                        Login
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
