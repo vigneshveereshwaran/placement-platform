@@ -223,7 +223,44 @@ body{
     background:var(--hover-color);
     transform:scale(1.02);
 }
+/* =========================
+   ADD COMPANY FORM
+========================= */
 
+.company-form{
+    max-width:600px;
+    margin-top:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.company-form input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1a2d4a;
+    color:white;
+    font-size:15px;
+}
+
+.company-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary-color);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.company-form button:hover{
+    background:var(--hover-color);
+}
 /* =========================
    TABLE
 ========================= */
