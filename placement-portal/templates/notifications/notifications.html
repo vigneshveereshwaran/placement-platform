@@ -1,23 +1,52 @@
 {% extends 'base.html' %}
 
-{% block title %}Notifications{% endblock %}
+{% block title %}
+Notifications
+{% endblock %}
 
 {% block content %}
 
-<div class="card">
+<div class="notification-container">
 
-    <h2>Notifications</h2>
-
-    <div class="notification">
-        Resume submission deadline today 6 PM
+    <div class="page-header">
+        <h1>🔔 Notifications</h1>
+        <p>Latest updates and placement alerts</p>
     </div>
 
-    <div class="notification">
-        TCS drive starts tomorrow
+    <div class="notification-card urgent">
+        <div class="icon">⚠️</div>
+        <div class="text">
+            <h3>Resume Submission Deadline</h3>
+            <p>Submit your resume before today 6:00 PM.</p>
+            <span>Today</span>
+        </div>
     </div>
 
-    <div class="notification">
-        Infosys aptitude test on Monday
+    <div class="notification-card info">
+        <div class="icon">🏢</div>
+        <div class="text">
+            <h3>TCS Recruitment Drive</h3>
+            <p>TCS drive starts tomorrow at 10:00 AM.</p>
+            <span>Tomorrow</span>
+        </div>
+    </div>
+
+    <div class="notification-card success">
+        <div class="icon">🎯</div>
+        <div class="text">
+            <h3>Infosys Aptitude Test</h3>
+            <p>Infosys online test scheduled on Monday.</p>
+            <span>Upcoming</span>
+        </div>
+    </div>
+
+    <div class="notification-card info">
+        <div class="icon">📢</div>
+        <div class="text">
+            <h3>New Company Added</h3>
+            <p>Zoho Corporation has been added to placement drives.</p>
+            <span>Just Now</span>
+        </div>
     </div>
 
 </div>
