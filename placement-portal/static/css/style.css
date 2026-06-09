@@ -223,7 +223,44 @@ body{
     background:var(--hover-color);
     transform:scale(1.02);
 }
+/* =========================
+   ADD COMPANY FORM
+========================= */
 
+.company-form{
+    max-width:600px;
+    margin-top:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.company-form input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1a2d4a;
+    color:white;
+    font-size:15px;
+}
+
+.company-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary-color);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.company-form button:hover{
+    background:var(--hover-color);
+}
 /* =========================
    TABLE
 ========================= */
@@ -253,22 +290,69 @@ body{
    NOTIFICATIONS
 ========================= */
 
-.notification-box{
-    background:#1a2d4a;
+/* Notification Page */
 
-    padding:20px;
-
-    border-radius:12px;
-
-    margin-bottom:20px;
-
-    border-left:5px solid var(--primary-color);
-
-    transition:0.3s;
+.notification-container {
+    max-width: 900px;
+    margin: 30px auto;
 }
 
-.notification-box:hover{
-    transform:translateY(-3px);
+.page-header h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #bdbdbd;
+    margin-bottom: 30px;
+}
+
+.notification-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.notification-card:hover {
+    transform: translateY(-5px);
+}
+
+.notification-card .icon {
+    font-size: 35px;
+}
+
+.notification-card .text h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.notification-card .text p {
+    color: #d9d9d9;
+    margin-bottom: 5px;
+}
+
+.notification-card .text span {
+    color: #00e5ff;
+    font-size: 13px;
+}
+
+.urgent {
+    border-left: 5px solid #ff4d4d;
+}
+
+.info {
+    border-left: 5px solid #00e5ff;
+}
+
+.success {
+    border-left: 5px solid #00ff95;
 }
 
 /* =========================
