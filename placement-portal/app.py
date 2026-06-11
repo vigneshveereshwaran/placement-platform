@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from utils.evaluator import evaluate_answers
 
 app = Flask(__name__)
 
@@ -118,7 +119,7 @@ def add_company():
 @app.route('/student-dashboard')
 def student_dashboard():
     return render_template(
-        'student/student_dashboard.html',
+        'student/dashboard.html',
 
         student_navbar=True,
 
@@ -126,6 +127,42 @@ def student_dashboard():
         show_companies=True,
         show_applications=True,
         show_profile=True
+    )
+@app.route('/test')
+def test_page():
+    return render_template(
+        'student/test.html',
+        student_navbar=True
+    )
+
+@app.route('/submit_test', methods=['POST'])
+def submit_test():
+
+    user_answers = request.form.to_dict()
+
+    result = evaluate_answers(user_answers)
+
+    return render_template(
+        'student/results.html',
+        score=result["score"],
+        total=result["total"],
+        percentage=result["percentage"],
+        student_navbar=True,
+
+        show_dashboard=True,
+        show_companies=True,
+        show_applications=True,
+        show_profile=True
+    )
+
+@app.route('/results')
+def results_page():
+    return render_template(
+        'student/results.html',
+        score=2,
+        total=2,
+        percentage=100,
+        student_navbar=True
     )
 
 
