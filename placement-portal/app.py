@@ -34,7 +34,7 @@ def forgot_password():
 @app.route('/admin-dashboard')
 def admin_dashboard():
     return render_template(
-        'admin/admin_dashboard.html',
+        'admin/dashboard.html',
 
         admin_navbar=True,
 
@@ -118,7 +118,7 @@ def add_company():
 @app.route('/student-dashboard')
 def student_dashboard():
     return render_template(
-        'student/student_dashboard.html',
+        'student/dashboard.html',
 
         student_navbar=True,
 
@@ -178,7 +178,7 @@ def profile():
 @app.route('/company-dashboard')
 def company_dashboard():
     return render_template(
-        'company/company_dashboard.html',
+        'company/dashboard.html',
 
         company_navbar=True,
 
